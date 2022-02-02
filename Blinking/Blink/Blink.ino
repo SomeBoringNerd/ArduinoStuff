@@ -17,5 +17,5 @@ void loop()
 
 int FrequencyToMS(int hz)
 {
-    return 1000 / hz;
+    return (1000 / hz) / 2;
 }
