@@ -1,20 +1,15 @@
+#define LIGHT_SENSOR_PIN 36
 #define LED_BUILTIN 2
 
-// s'execute au démarrage
-void setup()
-{
-    pinMode(LED_BUILTIN, OUTPUT);
-    pinMode(36, INPUT);
+void setup() 
+{  
+  Serial.begin(9600);
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// s'execute en bouble
-void loop()
-{ 
-    if(digitalRead(36)){
-        digitalWrite(LED_BUILTIN, HIGH);
-    }
-    // note : ne pas utiliser le GND de la pate 18
-    else {
-        digitalWrite(LED_BUILTIN, LOW);
-    }
+void loop() 
+{
+  float analogValue = analogRead(LIGHT_SENSOR_PIN);
+  Serial.println(((analogValue / 4095) * 100));
+  delay(150);
 }

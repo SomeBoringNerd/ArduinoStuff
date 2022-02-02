@@ -15,6 +15,7 @@ void loop()
     delay(FrequencyToMS(5));
 }
 
+// converti une fréquence en ms afin que le programme 
 int FrequencyToMS(int hz)
 {
     return (1000 / hz) / 2;
