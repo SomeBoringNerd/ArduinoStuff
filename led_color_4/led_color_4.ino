@@ -13,10 +13,10 @@ void setup()
 
 void loop()
 {
-    // s'éxécute si le bouton est appuyé et que la routine ne tourne pas
-    if(digitalRead(2) && !already_looping){
-      loop_again();
-    }
+  // s'éxécute si le bouton est appuyé et que la routine ne tourne pas
+  if (digitalRead(2) && !already_looping) {
+    loop_again();
+  }
 }
 
 //boucle le programe quand on appuie sur le bouton pressoir et qu'il n'est pas déjà en train de tourner
@@ -26,10 +26,10 @@ void loop_again()
   already_looping = true;
   for (int i = 0; i < 57; i++) {
     pixels.clear();
-    turn_light(i + 3, 255, 0, 0);   // rouge    || C
-    turn_light(i + 2, 0, 255, 255); // jaune    || O
-    turn_light(i + 1, 255, 128, 0); // orange   || R
-    turn_light(i, 0, 255, 0);       // vert     || E
+    turn_light(i + 3, 255, 255, 255); // blanc    ||  C
+    turn_light(i + 2, 0, 255, 255);   // jaune    ||  O
+    turn_light(i + 1, 255, 128, 0);   // orange   ||  R
+    turn_light(i, 0, 255, 0);         // vert     ||  E
     pixels.show();
     delay(25);
   }
