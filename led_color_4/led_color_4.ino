@@ -26,10 +26,10 @@ void loop_again()
   already_looping = true;
   for (int i = 0; i < 57; i++) {
     pixels.clear();
-    turn_light(i + 3, 255, 0, 0); // rouge
-    turn_light(i + 2, 0, 255, 0); // vert
-    turn_light(i + 1, 0, 0, 255); // bleu
-    turn_light(i, 255, 255, 0);   // jaune
+    turn_light(i + 3, 255, 0, 0);   // rouge    || C
+    turn_light(i + 2, 0, 255, 255); // jaune    || O
+    turn_light(i + 1, 255, 128, 0); // orange   || R
+    turn_light(i, 0, 255, 0);       // vert     || E
     pixels.show();
     delay(25);
   }
